@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+html {
+    background-color: #191c29;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    width: 90vw;
+    max-width: 1000px;
+    height: 100vh;
+    background: #1f2330;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer {
+    height: 70px;
+    background-color: #191c29;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.created_by {
+    text-align: right;
+    font-size: 1em;
+    width: 50%;
+    display: grid;
+    align-items: center;
+}
+
+.github_footer {
+    width: 5%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1em;
+}
+
+.sourced_from {
+    width: 50%;
+    display: grid;
+    align-items: center;
+}
+
+.sourced_from p {
+    margin: 0;
+    padding: 0;
+}
+
+.sourced_from_top {
+    font-size: .75em;
+}
+
+.sourced_from_bottom p {
+    font-weight: normal;
+    text-align: center;
+}
+
+.sourced_from div {
+    width: 50%;
+}
+
+footer img {
+    height: 30px;
+}
+
+footer p {
+    background: -webkit-linear-gradient(left, #0199EE, #01E5BB);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+@media (prefers-color-scheme: light) {
+    html {
+        background-color: #F3F3F3;
+    }
+    body {
+        background: #F3F3F3;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25)
+    }
+}

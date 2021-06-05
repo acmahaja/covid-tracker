@@ -37,8 +37,8 @@ app.get('/data', async(req, res) => {
 });
 
 app.get('/', async(req, res) => {
-
-    res.render('index', { data })
+    //, { data }
+    res.render('index')
 });
 
 const PORT = process.env.PORT || 3000;
