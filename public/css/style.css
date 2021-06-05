@@ -22,7 +22,7 @@ body {
 }
 
 footer {
-    height: 70px;
+    height: 65px;
     background-color: #191c29;
     display: flex;
     flex-direction: row;
@@ -32,13 +32,13 @@ footer {
 .created_by {
     text-align: right;
     font-size: 1em;
-    width: 50%;
+    width: 45%;
     display: grid;
     align-items: center;
 }
 
 .github_footer {
-    width: 5%;
+    width: 15%;
     display: grid;
     justify-content: center;
     align-items: center;
@@ -46,7 +46,7 @@ footer {
 }
 
 .sourced_from {
-    width: 50%;
+    width: 45%;
     display: grid;
     align-items: center;
 }
@@ -65,19 +65,101 @@ footer {
     text-align: center;
 }
 
-.sourced_from div {
-    width: 50%;
-}
-
 footer img {
     height: 30px;
 }
 
-footer p {
+.sourced_from img {
+    height: 3.5rem;
+}
+
+.gradient_text {
     background: -webkit-linear-gradient(left, #0199EE, #01E5BB);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
+}
+
+.nav_icon {
+    height: 20px;
+}
+
+nav {
+    background-color: #1f2330;
+}
+
+.brand-logo {
+    height: 100%;
+    width: 150px;
+    background-image: url(/icons/logo.png);
+    background-repeat: no-repeat;
+    background-size: 80% 80%;
+    background-position: center;
+}
+
+.git_icon {
+    height: 64px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.git_icon img {
+    height: 30px;
+    width: 30px;
+}
+
+.sidenav {
+    background-color: #1f2330;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.banner {
+    width: 100%;
+    height: 10rem;
+    background: linear-gradient(102.87deg, #0199EE 0%, #01E5BB 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.banner img {
+    width: 80%;
+}
+
+.center_text {
+    text-align: center;
+}
+
+.sidenav ul li {
+    font-size: 1.5rem;
+    height: 75px;
+}
+
+.About {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.view-on-github {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 75px;
+}
+
+.sidenav ul li img {
+    margin-right: 1em;
+    height: 30px;
+    width: 30px;
 }
 
 @media (prefers-color-scheme: light) {

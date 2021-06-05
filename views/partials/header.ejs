@@ -1,0 +1,37 @@
+<nav>
+    <div class="nav-wrapper">
+        <div class="brand-logo hide-on-med-and-down"></div>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><img src="/icons/nav-icon.png" alt="" class="nav_icon"></a>
+        <ul class="right hide-on-med-and-down">
+            <li class="About gradient_text">About</li>
+            <li>
+                <div class="git_icon">
+                    <img src="/icons/github-gradient.png" alt="" srcset="">
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<ul class="sidenav" id="mobile-demo">
+    <div>
+        <div class="banner">
+            <img src="/icons/logo-white.png" alt="">
+
+        </div>
+        <ul>
+            <li class="About gradient_text center_text">About</li>
+            <li class="gradient_text center_text">
+                <div class="view-on-github">
+                    <img src="/icons/github-gradient.png" alt="">
+                    <p>
+                        View on Github
+                    </p>
+
+                </div>
+            </li>
+        </ul>
+    </div>
+    <%- include('footer.ejs') %>
+
+</ul>
