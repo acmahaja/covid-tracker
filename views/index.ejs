@@ -1,17 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="has-background-grey-lightend">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
-
     <title>Covid Tracker</title>
 </head>
 
 <body>
 
+
+    <div class="countries is-mobile is-multiline columns is-centered">
+
+
+        <hr>
+        <% for (const country in data) { %>
+            <div class="country column is-narrow" style="width: 200px;">
+                <%= data[country].location %>
+                    <div class="columns " style="background-color: aqua;">
+                        <div class="column">
+                            <%= data[country].data[data[country].data.length - 1].total_cases %>
+                        </div>
+                        <div class="column">
+                            <%= data[country].data[data[country].data.length - 1].new_cases %>
+                        </div>
+                        <div class="column">
+                            <%= data[country].data[data[country].data.length - 1].total_deaths %>
+                        </div>
+                    </div>
+            </div>
+            <% } %>
+
+
+
+    </div>
 </body>
 
 </html>
