@@ -20,12 +20,37 @@
 <body>
     <%- include('partials/header.ejs') %>
         <section>
-
+            <div class="header_cards">
+                <div class="header_card gradient">
+                    <p class="title">Total Cases</p>
+                    <img class="icon" src="/icons/covid-white.png" alt="">
+                    <p class="number">1,000,000</p>
+                    <p class="date">today</p>
+                </div>
+                <div class="header_card gradient">
+                    <p class="title">Total Cases</p>
+                    <img class="icon" src="/icons/vaccinated-white.png" alt="">
+                    <p class="number">1,000,000</p>
+                    <p class="date">today</p>
+                </div>
+                <div class="header_card  shadow">
+                    <p class="title gradient_text">New Cases</p>
+                    <img class="icon gradient_text" src="/icons/mask-gradient.png" alt="">
+                    <p class="number gradient_text">1,000,000</p>
+                    <p class="date gradient_text">today</p>
+                </div>
+                <div class="header_card shadow ">
+                    <p class="title  gradient_text">New Vaccinations</p>
+                    <img class="icon  gradient_text" src="/icons/vaccine-gradient.png" alt="">
+                    <p class="number  gradient_text">1,000,000</p>
+                    <p class="date  gradient_text">today</p>
+                </div>
+            </div>
+            <div class="country_data">asasdd</div>
         </section>
 
 
-        <%- include('partials/footer.ejs') %>
-            <script src="/scripts/navbar.js"></script>
+        <script src="/scripts/navbar.js"></script>
 </body>
 
 </html>
