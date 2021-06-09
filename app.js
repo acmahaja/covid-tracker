@@ -9,19 +9,22 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(__dirname + '/public'));
 
+// let data = null;
+
+// function getDataSet() {
+//     try {
+//         axios.get('https://covid.ourworldindata.org/data/owid-covid-data.json').then((result) => {
+//             console.log("got data");
+//             data = result;
+//         });
+//     } catch (e) {
+//         console.log(e);
+//     }
+// }
+//getDataSet();
+
 const data = require('./public/data.json');
 const countries = require('./public/country-code.json');
-
-async function getDataSet() {
-    try {
-        await axios.get('https://covid.ourworldindata.org/data/owid-covid-data.json').then((result) => {
-            console.log(result);
-            return result;
-        });
-    } catch (e) {
-        console.log(e);
-    }
-}
 
 app.get('/country/:code', async(req, res) => {
     const { code } = req.params;
@@ -38,7 +41,8 @@ app.get('/data', async(req, res) => {
 
 app.get('/', async(req, res) => {
     //, { data }
-    res.render('index')
+
+    res.render('index', { data, countries })
 });
 
 const PORT = process.env.PORT || 3000;

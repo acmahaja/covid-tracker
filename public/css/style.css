@@ -12,7 +12,6 @@ body {
     padding: 0;
     margin: 0;
     width: 90vw;
-    max-width: 1000px;
     height: 100vh;
     background: #1f2330;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
@@ -38,7 +37,7 @@ footer {
 }
 
 .github_footer {
-    width: 15%;
+    width: 10%;
     display: grid;
     justify-content: center;
     align-items: center;
@@ -160,6 +159,138 @@ nav {
     margin-right: 1em;
     height: 30px;
     width: 30px;
+}
+
+.header-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 1em 0;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.card {
+    width: 16em;
+    height: 8.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.gradient {
+    background: linear-gradient(95.43deg, #0098EE 0.02%, #00EEB5 196.57%, #00EEB5 196.57%);
+}
+
+.card-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: bold;
+    color: white;
+}
+
+.covid-header-image {
+    display: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+}
+
+.card-number {
+    text-align: right;
+    font-weight: 600;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+}
+
+.card-footer {
+    text-align: left;
+    font-size: 1rem;
+    color: white;
+}
+
+.countries {
+    background-color: #191c29;
+    width: 95%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-self: center;
+    height: fit-content;
+    padding: 1.5em;
+}
+
+.country_card {
+    width: 20em;
+    height: fit-content;
+    padding: .75em;
+    box-shadow: 1px 1px 5px 2px rgba(0, 152, 238, 0.15);
+    border-radius: 2px;
+}
+
+.country_card_flag * {
+    margin: 0;
+    padding: 0;
+}
+
+.country_card_flag {
+    width: 50px;
+    height: 75px;
+    background: url(/images/flags/png250px/us.png);
+    background-size: cover;
+    border-radius: 2px;
+    background-position: center;
+}
+
+.country_card_header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.country_card_header_overview {
+    padding-left: 1em;
+}
+
+.country_card_header_country {
+    font-size: .75em;
+}
+
+.country_card_header_total_cases {
+    font-size: 1.25em;
+}
+
+.country_card_header_total_cases {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: baseline;
+}
+
+.country_card_header_total_cases_num {
+    font-size: 1.75em;
+    padding-left: 0.25em;
+}
+
+.country_card_details {
+    width: 100%;
+    padding: 1px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+}
+
+.country_card_details div {
+    border: pink 1px solid;
 }
 
 @media (prefers-color-scheme: light) {

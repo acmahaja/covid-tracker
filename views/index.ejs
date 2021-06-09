@@ -19,9 +19,134 @@
 
 <body>
     <section>
-
         <%- include('partials/header.ejs') %>
 
+            <div class="header-cards">
+                <div class="card gradient">
+                    <div class="card-header">
+                        <div>
+                            Total Cases
+                        </div>
+                        <div class="covid-header-image">
+                            <img class="covid-header-image" src="/icons/covid-white.png" alt="">
+
+                        </div>
+                    </div>
+                    <div class="card-number">
+                        <%= JSON.stringify(data["OWID_WRL"].data[data["OWID_WRL"].data.length-1].total_cases)%>
+                    </div>
+                    <div class="card-footer">last updated:
+                        <%= JSON.stringify(data["OWID_WRL"].data[data["OWID_WRL"].data.length-1].date)%>
+                    </div>
+                </div>
+
+                <div class="card gradient">
+                    <div class="card-header">
+                        <div>
+                            Total Vaccinations
+                        </div>
+                        <div class="covid-header-image">
+                            <img class="covid-header-image" src="/icons/vaccine-white.png" alt="">
+
+                        </div>
+                    </div>
+                    <div class="card-number">
+                        <%= JSON.stringify(data["OWID_WRL"].data[data["OWID_WRL"].data.length-2].total_vaccinations)%>
+                    </div>
+                    <div class="card-footer">last updated:
+                        <%= JSON.stringify(data["OWID_WRL"].data[data["OWID_WRL"].data.length-2].date)%>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <div class="card-header gradient_text">
+                        <div class="card-header">
+                            New Cases
+                        </div>
+                        <div class="covid-header-image">
+                            <img class="covid-header-image" src="/icons/mask-gradient.png" alt="">
+
+                        </div>
+                    </div>
+                    <div class="card-number gradient_text">
+                        <%= JSON.stringify(data["OWID_WRL"].data[data["OWID_WRL"].data.length-1].new_cases)%>
+                    </div>
+                    <div class="card-footer gradient_text">last updated:
+                        <%= JSON.stringify(data["OWID_WRL"].data[data["OWID_WRL"].data.length-1].date)%>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header gradient_text">
+                        <div class="card-header">
+                            New Vaccinations
+                        </div>
+                        <div class="covid-header-image">
+                            <img class="covid-header-image" src="/icons/vaccine-gradient.png" alt="">
+
+                        </div>
+                    </div>
+                    <div class="card-number gradient_text">
+                        <%= JSON.stringify(data["OWID_WRL"].data[data["OWID_WRL"].data.length-2].new_vaccinations)%>
+                    </div>
+                    <div class="card-footer gradient_text">last updated:
+                        <%= JSON.stringify(data["OWID_WRL"].data[data["OWID_WRL"].data.length-2].date)%>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="countries">
+                <div class="countries_header gradient">
+
+                </div>
+                <div class="country_card gradient_text">
+                    <div class="country_card_header">
+                        <div>
+                            <div class="country_card_flag">
+                            </div>
+                        </div>
+                        <div class="country_card_header_overview">
+                            <div class="country_card_header_country">
+                                <%= JSON.stringify(data["USA"].location)%>
+                            </div>
+                            <div class="country_card_header_total_cases">Total Cases</div>
+                            <div class="country_card_header_total_cases">
+                                <div><img class="covid-header-image" src="/icons/covid-gradient.png" alt="">
+                                </div>
+                                <div class="country_card_header_total_cases_num">
+                                    <%= JSON.stringify(data["USA"].data[data["USA"].data.length-1].total_cases)%>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="country_card_details">
+                        <div class="country_card_vaccinations">
+                            <div class="country_card_vaccinations_img"></div>
+                            <div>
+                                <div class="country_card_header_country">
+                                    <%= JSON.stringify(data["USA"].location)%>
+                                </div>
+                                <div class="country_card_header_total_cases">Total Cases</div>
+
+                            </div>
+                        </div>
+                        <div class="country_card_vaccinations">
+
+                        </div>
+                        <div class="country_card_new_cases">
+
+                        </div>
+                        <div class="country_card_death">
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
 
     </section>
 
