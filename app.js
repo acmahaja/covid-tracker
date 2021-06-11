@@ -25,6 +25,7 @@ app.use(express.static(__dirname + '/public'));
 
 const data = require('./public/data.json');
 const countries = require('./public/country-code.json');
+const { count } = require('console');
 
 app.get('/country/:code', async(req, res) => {
     const { code } = req.params;
@@ -40,12 +41,27 @@ app.get('/data', async(req, res) => {
 });
 
 app.get('/', async(req, res) => {
-    //, { data }
+    let global;
+    let countries;
+    try {
+        axios.get('https://disease.sh/v3/covid-19/all?lastdays=all').then((result) => {
+            global = result.data;
+        }).then(()=>{
+            axios.get('https://disease.sh/v3/covid-19/countries').then((result) =>{
+                countries = result.data;
+            }).then(()=>{
+                res.render('index',{global, countries})
+            })
+        });
+    } catch (e) {
+        console.log(e);
+    }
 
-    res.render('index', { data, countries })
 });
 
-const PORT = process.env.PORT || 3000;
+
+
+const PORT = process.env.PORT || 3002;
 app.listen(PORT, () => {
-    console.log(`Server listening on port ${PORT}`);
+    console.log(`Server listening on port https://localhost:${PORT}`);
 });
