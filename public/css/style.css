@@ -227,7 +227,7 @@ section {
 .country-card {
     height: fit-content;
     width: 17em;
-    margin: .25em;
+    margin: .75em;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

@@ -1,3 +1,7 @@
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 function getData() {
     fetch('https://disease.sh/v3/covid-19/countries')
         .then(
@@ -24,6 +28,12 @@ function getData() {
 function displayCountries() {
     const cards = document.getElementsByClassName('cards');
     countries_data.forEach(country => {
+
+        for (let i = 0; i < country.length; i++) {
+            country[i] = numberWithCommas(country[i]);
+
+        }
+
         const card = `<div class="country-card">
                     <div class="title gradient_text">
                         ${country.country}
@@ -75,6 +85,15 @@ function displayCountries() {
 
 function addcountry(country) {
     const cards = document.getElementsByClassName('cards');
+
+    let data = {};
+    data.cases = numberWithCommas(country.cases)
+    data.recovered = numberWithCommas(country.recovered)
+    data.active = numberWithCommas(country.active)
+    data.todayCases = numberWithCommas(country.todayCases)
+    data.deaths = numberWithCommas(country.deaths)
+
+
     const card = `<div class="country-card">
                     <div class="title gradient_text">
                         ${country.country}
@@ -85,7 +104,7 @@ function addcountry(country) {
                             <p>Total Cases</p>
                             <div class="number">
                                 <div class="covid"></div>
-                                <p>${country.cases}</p>
+                                <p>${data.cases}</p>
                             </div>
                         </div>
                     </div>
@@ -94,28 +113,28 @@ function addcountry(country) {
                             <div class="recovery"></div>
                             <div class="number">
                                 <p>Total Recoveries</p>
-                                <p>${country.recovered}</p>
+                                <p>${data.recovered}</p>
                             </div>
                         </div>
                         <div class="other_stats_num gradient_text">
                             <div class="active"></div>
                             <div class="number">
                                 <p>Active Cases</p>
-                                <p>${country.active}</p>
+                                <p>${data.active}</p>
                             </div>
                         </div>
                         <div class="other_stats_num gradient_text">
                             <div class=" mask"></div>
                             <div class="number">
                                 <p>New Cases</p>
-                                <p>${country.todayCases}</p>
+                                <p>${data.todayCases}</p>
                             </div>
                         </div>
                         <div class="other_stats_num gradient_text">
                             <div class="deaths"></div>
                             <div class="number">
                                 <p>Total Deaths</p>
-                                <p>${country.deaths}</p>
+                                <p>${data.deaths}</p>
                             </div>
                         </div>
                     </div>
@@ -150,10 +169,10 @@ document.addEventListener("DOMContentLoaded", async() => {
             if (response.status === 200) {
                 response.json().then(function(result) {
                     console.log(result);
-                    document.getElementById('total_cases').innerText = result.cases;
-                    document.getElementById('total_recoveries').innerText = result.recovered;
-                    document.getElementById('new_cases').innerText = result.todayCases;
-                    document.getElementById('acitve_cases').innerText = result.active;
+                    document.getElementById('total_cases').innerText = numberWithCommas(result.cases);
+                    document.getElementById('total_recoveries').innerText = numberWithCommas(result.recovered);
+                    document.getElementById('new_cases').innerText = numberWithCommas(result.todayCases);
+                    document.getElementById('acitve_cases').innerText = numberWithCommas(result.active);
                 });
             } else {
                 console.log('Looks like there was a problem. Status Code: ' +
