@@ -92,14 +92,13 @@ function addcountry(country) {
     data.active = numberWithCommas(country.active)
     data.todayCases = numberWithCommas(country.todayCases)
     data.deaths = numberWithCommas(country.deaths)
-
-
+    data.flag = country.countryInfo.flag
     const card = `<div class="country-card">
                     <div class="title gradient_text">
                         ${country.country}
                     </div>
                     <div class="total_cases gradient_text">
-                        <div class="flag" style="background-image: url(/images/flags/png250px/${country.countryInfo.iso2.toLowerCase()}.png);"></div>
+                        <div class="flag" style="background-image: url(${data.flag});"></div>
                         <div class="total_cases_num">
                             <p>Total Cases</p>
                             <div class="number">
@@ -168,14 +167,13 @@ document.addEventListener("DOMContentLoaded", async() => {
         .then(function(response) {
             if (response.status === 200) {
                 response.json().then(function(result) {
-                    console.log(result);
                     document.getElementById('total_cases').innerText = numberWithCommas(result.cases);
                     document.getElementById('total_recoveries').innerText = numberWithCommas(result.recovered);
                     document.getElementById('new_cases').innerText = numberWithCommas(result.todayCases);
                     document.getElementById('acitve_cases').innerText = numberWithCommas(result.active);
                 });
             } else {
-                console.log('Looks like there was a problem. Status Code: ' +
+                console.err('Looks like there was a problem. Status Code: ' +
                     response.status);
             }
         })
@@ -193,7 +191,7 @@ document.addEventListener("DOMContentLoaded", async() => {
                         });
                     });
                 } else {
-                    console.log('Looks like there was a problem. Status Code: ' +
+                    console.err('Looks like there was a problem. Status Code: ' +
                         response.status);
                 }
             }
@@ -201,7 +199,7 @@ document.addEventListener("DOMContentLoaded", async() => {
             displayCountries();
         })
         .catch(function(err) {
-            console.log('Fetch Error :-S', err);
+            console.err('Fetch Error :-S', err);
         });
 
 })
@@ -212,7 +210,6 @@ document.getElementById("filterer").addEventListener("input", () => {
 
     cards[0].innerHTML = "";
     countries_data.forEach((country) => {
-        console.log(country);
         if (country.country.toLowerCase().includes(document.getElementById("filterer").value.toLowerCase())) {
             addcountry(country)
 
