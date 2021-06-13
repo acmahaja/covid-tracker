@@ -212,6 +212,7 @@ document.getElementById("filterer").addEventListener("input", () => {
 
     cards[0].innerHTML = "";
     countries_data.forEach((country) => {
+        console.log(country);
         if (country.country.toLowerCase().includes(document.getElementById("filterer").value.toLowerCase())) {
             addcountry(country)
 
