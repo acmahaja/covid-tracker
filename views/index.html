@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="/css/style.css">
 
 </head>
@@ -62,7 +63,7 @@
                     <img src="/icons/covid-white.png" alt="">
                 </div>
                 <div class="number">
-                    <p>10,000,000</p>
+                    <p id="total_cases">10,000,000</p>
                 </div>
             </div>
             <div class="global_card gradient">
@@ -71,7 +72,7 @@
                     <img src="/icons/vaccinated-white.png" alt="">
                 </div>
                 <div class="number">
-                    <p>10,000,000</p>
+                    <p id="total_recoveries">10,000,000</p>
                 </div>
             </div>
             <div class="global_card">
@@ -80,7 +81,7 @@
                     <img src="/icons/mask-gradient.png" alt="">
                 </div>
                 <div class="number gradient_text">
-                    <p>10,000,000</p>
+                    <p id="new_cases">10,000,000</p>
                 </div>
             </div>
             <div class="global_card">
@@ -89,473 +90,14 @@
                     <img src="/icons/active-cases.png" alt="">
                 </div>
                 <div class="number gradient_text">
-                    <p>10,000,000</p>
+                    <p id="acitve_cases">10,000,000</p>
                 </div>
             </div>
         </div>
         <div class="country_data">
             <div class="filter"></div>
             <div class="cards">
-                <div class="country-card">
-                    <div class="title gradient_text">
-                        USA
-                    </div>
-                    <div class="total_cases gradient_text">
-                        <div class="flag"></div>
-                        <div class="total_cases_num">
-                            <p>Total Cases</p>
-                            <div class="number">
-                                <div class="covid"></div>
-                                <p>10,000,00</p>
 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="other_stats">
-                        <div class="other_stats_num gradient_text">
-                            <div class="recovery"></div>
-                            <div class="number">
-                                <p>Total Recoveries</p>
-                                <p>10,000,000</p>
-                            </div>
-                        </div>
-                        <div class="other_stats_num gradient_text">
-                            <div class="active"></div>
-                            <div class="number">
-                                <p>Active Cases</p>
-                                <p>10,000,000</p>
-                            </div>
-                        </div>
-                        <div class="other_stats_num gradient_text">
-                            <div class=" mask"></div>
-                            <div class="number">
-                                <p>New Cases</p>
-                                <p>10,000,000</p>
-                            </div>
-                        </div>
-                        <div class="other_stats_num gradient_text">
-                            <div class="deaths"></div>
-                            <div class="number">
-                                <p>Total Deaths</p>
-                                <p>10,000,000</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="country-card">
-                    <div class="title gradient_text">
-                        USA
-                    </div>
-                    <div class="total_cases gradient_text">
-                        <div class="flag"></div>
-                        <div class="total_cases_num">
-                            <p>Total Cases</p>
-                            <div class="number">
-                                <div class="covid"></div>
-                                <p>10,000,00</p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="other_stats">
-                        <div class="other_stats_num gradient_text">
-                            <div class="recovery"></div>
-                            <div class="number">
-                                <p>Total Recoveries</p>
-                                <p>10,000,000</p>
-                            </div>
-                        </div>
-                        <div class="other_stats_num gradient_text">
-                            <div class="active"></div>
-                            <div class="number">
-                                <p>Active Cases</p>
-                                <p>10,000,000</p>
-                            </div>
-                        </div>
-                        <div class="other_stats_num gradient_text">
-                            <div class=" mask"></div>
-                            <div class="number">
-                                <p>New Cases</p>
-                                <p>10,000,000</p>
-                            </div>
-                        </div>
-                        <div class="other_stats_num gradient_text">
-                            <div class="deaths"></div>
-                            <div class="number">
-                                <p>Total Deaths</p>
-                                <p>10,000,000</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="country-card">
-                    <div class="title gradient_text">
-                        USA
-                    </div>
-                    <div class="total_cases gradient_text">
-                        <div class="flag"></div>
-                        <div class="total_cases_num">
-                            <p>Total Cases</p>
-                            <div class="number">
-                                <div class="covid"></div>
-                                <p>10,000,00</p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="other_stats">
-                        <div class="other_stats_num gradient_text">
-                            <div class="recovery"></div>
-                            <div class="number">
-                                <p>Total Recoveries</p>
-                                <p>10,000,000</p>
-                            </div>
-                        </div>
-                        <div class="other_stats_num gradient_text">
-                            <div class="active"></div>
-                            <div class="number">
-                                <p>Active Cases</p>
-                                <p>10,000,000</p>
-                            </div>
-                        </div>
-                        <div class="other_stats_num gradient_text">
-                            <div class=" mask"></div>
-                            <div class="number">
-                                <p>New Cases</p>
-                                <p>10,000,000</p>
-                            </div>
-                        </div>
-                        <div class="other_stats_num gradient_text">
-                            <div class="deaths"></div>
-                            <div class="number">
-                                <p>Total Deaths</p>
-                                <p>10,000,000</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="country-card">
-                    <div class="title gradient_text">
-                        USA
-                    </div>
-                    <div class="total_cases gradient_text">
-                        <div class="flag"></div>
-                        <div class="total_cases_num">
-                            <p>Total Cases</p>
-                            <div class="number">
-                                <div class="covid"></div>
-                                <p>10,000,00</p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="other_stats">
-                        <div class="other_stats_num gradient_text">
-                            <div class="recovery"></div>
-                            <div class="number">
-                                <p>Total Recoveries</p>
-                                <p>10,000,000</p>
-                            </div>
-                        </div>
-                        <div class="other_stats_num gradient_text">
-                            <div class="active"></div>
-                            <div class="number">
-                                <p>Active Cases</p>
-                                <p>10,000,000</p>
-                            </div>
-                        </div>
-                        <div class="other_stats_num gradient_text">
-                            <div class=" mask"></div>
-                            <div class="number">
-                                <p>New Cases</p>
-                                <p>10,000,000</p>
-                            </div>
-                        </div>
-                        <div class="other_stats_num gradient_text">
-                            <div class="deaths"></div>
-                            <div class="number">
-                                <p>Total Deaths</p>
-                                <p>10,000,000</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="country-card">
-                    <div class="title gradient_text">
-                        USA
-                    </div>
-                    <div class="total_cases gradient_text">
-                        <div class="flag"></div>
-                        <div class="total_cases_num">
-                            <p>Total Cases</p>
-                            <div class="number">
-                                <div class="covid"></div>
-                                <p>10,000,00</p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="other_stats">
-                        <div class="other_stats_num gradient_text">
-                            <div class="recovery"></div>
-                            <div class="number">
-                                <p>Total Recoveries</p>
-                                <p>10,000,000</p>
-                            </div>
-                        </div>
-                        <div class="other_stats_num gradient_text">
-                            <div class="active"></div>
-                            <div class="number">
-                                <p>Active Cases</p>
-                                <p>10,000,000</p>
-                            </div>
-                        </div>
-                        <div class="other_stats_num gradient_text">
-                            <div class=" mask"></div>
-                            <div class="number">
-                                <p>New Cases</p>
-                                <p>10,000,000</p>
-                            </div>
-                        </div>
-                        <div class="other_stats_num gradient_text">
-                            <div class="deaths"></div>
-                            <div class="number">
-                                <p>Total Deaths</p>
-                                <p>10,000,000</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="country-card">
-                    <div class="title gradient_text">
-                        USA
-                    </div>
-                    <div class="total_cases gradient_text">
-                        <div class="flag"></div>
-                        <div class="total_cases_num">
-                            <p>Total Cases</p>
-                            <div class="number">
-                                <div class="covid"></div>
-                                <p>10,000,00</p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="other_stats">
-                        <div class="other_stats_num gradient_text">
-                            <div class="recovery"></div>
-                            <div class="number">
-                                <p>Total Recoveries</p>
-                                <p>10,000,000</p>
-                            </div>
-                        </div>
-                        <div class="other_stats_num gradient_text">
-                            <div class="active"></div>
-                            <div class="number">
-                                <p>Active Cases</p>
-                                <p>10,000,000</p>
-                            </div>
-                        </div>
-                        <div class="other_stats_num gradient_text">
-                            <div class=" mask"></div>
-                            <div class="number">
-                                <p>New Cases</p>
-                                <p>10,000,000</p>
-                            </div>
-                        </div>
-                        <div class="other_stats_num gradient_text">
-                            <div class="deaths"></div>
-                            <div class="number">
-                                <p>Total Deaths</p>
-                                <p>10,000,000</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="country-card">
-                    <div class="title gradient_text">
-                        USA
-                    </div>
-                    <div class="total_cases gradient_text">
-                        <div class="flag"></div>
-                        <div class="total_cases_num">
-                            <p>Total Cases</p>
-                            <div class="number">
-                                <div class="covid"></div>
-                                <p>10,000,00</p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="other_stats">
-                        <div class="other_stats_num gradient_text">
-                            <div class="recovery"></div>
-                            <div class="number">
-                                <p>Total Recoveries</p>
-                                <p>10,000,000</p>
-                            </div>
-                        </div>
-                        <div class="other_stats_num gradient_text">
-                            <div class="active"></div>
-                            <div class="number">
-                                <p>Active Cases</p>
-                                <p>10,000,000</p>
-                            </div>
-                        </div>
-                        <div class="other_stats_num gradient_text">
-                            <div class=" mask"></div>
-                            <div class="number">
-                                <p>New Cases</p>
-                                <p>10,000,000</p>
-                            </div>
-                        </div>
-                        <div class="other_stats_num gradient_text">
-                            <div class="deaths"></div>
-                            <div class="number">
-                                <p>Total Deaths</p>
-                                <p>10,000,000</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="country-card">
-                    <div class="title gradient_text">
-                        USA
-                    </div>
-                    <div class="total_cases gradient_text">
-                        <div class="flag"></div>
-                        <div class="total_cases_num">
-                            <p>Total Cases</p>
-                            <div class="number">
-                                <div class="covid"></div>
-                                <p>10,000,00</p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="other_stats">
-                        <div class="other_stats_num gradient_text">
-                            <div class="recovery"></div>
-                            <div class="number">
-                                <p>Total Recoveries</p>
-                                <p>10,000,000</p>
-                            </div>
-                        </div>
-                        <div class="other_stats_num gradient_text">
-                            <div class="active"></div>
-                            <div class="number">
-                                <p>Active Cases</p>
-                                <p>10,000,000</p>
-                            </div>
-                        </div>
-                        <div class="other_stats_num gradient_text">
-                            <div class=" mask"></div>
-                            <div class="number">
-                                <p>New Cases</p>
-                                <p>10,000,000</p>
-                            </div>
-                        </div>
-                        <div class="other_stats_num gradient_text">
-                            <div class="deaths"></div>
-                            <div class="number">
-                                <p>Total Deaths</p>
-                                <p>10,000,000</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="country-card">
-                    <div class="title gradient_text">
-                        USA
-                    </div>
-                    <div class="total_cases gradient_text">
-                        <div class="flag"></div>
-                        <div class="total_cases_num">
-                            <p>Total Cases</p>
-                            <div class="number">
-                                <div class="covid"></div>
-                                <p>10,000,00</p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="other_stats">
-                        <div class="other_stats_num gradient_text">
-                            <div class="recovery"></div>
-                            <div class="number">
-                                <p>Total Recoveries</p>
-                                <p>10,000,000</p>
-                            </div>
-                        </div>
-                        <div class="other_stats_num gradient_text">
-                            <div class="active"></div>
-                            <div class="number">
-                                <p>Active Cases</p>
-                                <p>10,000,000</p>
-                            </div>
-                        </div>
-                        <div class="other_stats_num gradient_text">
-                            <div class=" mask"></div>
-                            <div class="number">
-                                <p>New Cases</p>
-                                <p>10,000,000</p>
-                            </div>
-                        </div>
-                        <div class="other_stats_num gradient_text">
-                            <div class="deaths"></div>
-                            <div class="number">
-                                <p>Total Deaths</p>
-                                <p>10,000,000</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="country-card">
-                    <div class="title gradient_text">
-                        USA
-                    </div>
-                    <div class="total_cases gradient_text">
-                        <div class="flag"></div>
-                        <div class="total_cases_num">
-                            <p>Total Cases</p>
-                            <div class="number">
-                                <div class="covid"></div>
-                                <p>10,000,00</p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="other_stats">
-                        <div class="other_stats_num gradient_text">
-                            <div class="recovery"></div>
-                            <div class="number">
-                                <p>Total Recoveries</p>
-                                <p>10,000,000</p>
-                            </div>
-                        </div>
-                        <div class="other_stats_num gradient_text">
-                            <div class="active"></div>
-                            <div class="number">
-                                <p>Active Cases</p>
-                                <p>10,000,000</p>
-                            </div>
-                        </div>
-                        <div class="other_stats_num gradient_text">
-                            <div class=" mask"></div>
-                            <div class="number">
-                                <p>New Cases</p>
-                                <p>10,000,000</p>
-                            </div>
-                        </div>
-                        <div class="other_stats_num gradient_text">
-                            <div class="deaths"></div>
-                            <div class="number">
-                                <p>Total Deaths</p>
-                                <p>10,000,000</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -574,6 +116,468 @@
     <script src="/scripts/navbar.js"></script>
     <script src="/scripts/text.js"></script>
     <script src="/scripts/script.js"></script>
+
 </body>
 
 </html>
+
+<!-- <div class="country-card">
+        <div class="title gradient_text">
+            USA
+        </div>
+        <div class="total_cases gradient_text">
+            <div class="flag"></div>
+            <div class="total_cases_num">
+                <p>Total Cases</p>
+                <div class="number">
+                    <div class="covid"></div>
+                    <p>10,000,00</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="other_stats">
+            <div class="other_stats_num gradient_text">
+                <div class="recovery"></div>
+                <div class="number">
+                    <p>Total Recoveries</p>
+                    <p>10,000,000</p>
+                </div>
+            </div>
+            <div class="other_stats_num gradient_text">
+                <div class="active"></div>
+                <div class="number">
+                    <p>Active Cases</p>
+                    <p>10,000,000</p>
+                </div>
+            </div>
+            <div class="other_stats_num gradient_text">
+                <div class=" mask"></div>
+                <div class="number">
+                    <p>New Cases</p>
+                    <p>10,000,000</p>
+                </div>
+            </div>
+            <div class="other_stats_num gradient_text">
+                <div class="deaths"></div>
+                <div class="number">
+                    <p>Total Deaths</p>
+                    <p>10,000,000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="country-card">
+        <div class="title gradient_text">
+            USA
+        </div>
+        <div class="total_cases gradient_text">
+            <div class="flag"></div>
+            <div class="total_cases_num">
+                <p>Total Cases</p>
+                <div class="number">
+                    <div class="covid"></div>
+                    <p>10,000,00</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="other_stats">
+            <div class="other_stats_num gradient_text">
+                <div class="recovery"></div>
+                <div class="number">
+                    <p>Total Recoveries</p>
+                    <p>10,000,000</p>
+                </div>
+            </div>
+            <div class="other_stats_num gradient_text">
+                <div class="active"></div>
+                <div class="number">
+                    <p>Active Cases</p>
+                    <p>10,000,000</p>
+                </div>
+            </div>
+            <div class="other_stats_num gradient_text">
+                <div class=" mask"></div>
+                <div class="number">
+                    <p>New Cases</p>
+                    <p>10,000,000</p>
+                </div>
+            </div>
+            <div class="other_stats_num gradient_text">
+                <div class="deaths"></div>
+                <div class="number">
+                    <p>Total Deaths</p>
+                    <p>10,000,000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="country-card">
+        <div class="title gradient_text">
+            USA
+        </div>
+        <div class="total_cases gradient_text">
+            <div class="flag"></div>
+            <div class="total_cases_num">
+                <p>Total Cases</p>
+                <div class="number">
+                    <div class="covid"></div>
+                    <p>10,000,00</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="other_stats">
+            <div class="other_stats_num gradient_text">
+                <div class="recovery"></div>
+                <div class="number">
+                    <p>Total Recoveries</p>
+                    <p>10,000,000</p>
+                </div>
+            </div>
+            <div class="other_stats_num gradient_text">
+                <div class="active"></div>
+                <div class="number">
+                    <p>Active Cases</p>
+                    <p>10,000,000</p>
+                </div>
+            </div>
+            <div class="other_stats_num gradient_text">
+                <div class=" mask"></div>
+                <div class="number">
+                    <p>New Cases</p>
+                    <p>10,000,000</p>
+                </div>
+            </div>
+            <div class="other_stats_num gradient_text">
+                <div class="deaths"></div>
+                <div class="number">
+                    <p>Total Deaths</p>
+                    <p>10,000,000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="country-card">
+        <div class="title gradient_text">
+            USA
+        </div>
+        <div class="total_cases gradient_text">
+            <div class="flag"></div>
+            <div class="total_cases_num">
+                <p>Total Cases</p>
+                <div class="number">
+                    <div class="covid"></div>
+                    <p>10,000,00</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="other_stats">
+            <div class="other_stats_num gradient_text">
+                <div class="recovery"></div>
+                <div class="number">
+                    <p>Total Recoveries</p>
+                    <p>10,000,000</p>
+                </div>
+            </div>
+            <div class="other_stats_num gradient_text">
+                <div class="active"></div>
+                <div class="number">
+                    <p>Active Cases</p>
+                    <p>10,000,000</p>
+                </div>
+            </div>
+            <div class="other_stats_num gradient_text">
+                <div class=" mask"></div>
+                <div class="number">
+                    <p>New Cases</p>
+                    <p>10,000,000</p>
+                </div>
+            </div>
+            <div class="other_stats_num gradient_text">
+                <div class="deaths"></div>
+                <div class="number">
+                    <p>Total Deaths</p>
+                    <p>10,000,000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="country-card">
+        <div class="title gradient_text">
+            USA
+        </div>
+        <div class="total_cases gradient_text">
+            <div class="flag"></div>
+            <div class="total_cases_num">
+                <p>Total Cases</p>
+                <div class="number">
+                    <div class="covid"></div>
+                    <p>10,000,00</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="other_stats">
+            <div class="other_stats_num gradient_text">
+                <div class="recovery"></div>
+                <div class="number">
+                    <p>Total Recoveries</p>
+                    <p>10,000,000</p>
+                </div>
+            </div>
+            <div class="other_stats_num gradient_text">
+                <div class="active"></div>
+                <div class="number">
+                    <p>Active Cases</p>
+                    <p>10,000,000</p>
+                </div>
+            </div>
+            <div class="other_stats_num gradient_text">
+                <div class=" mask"></div>
+                <div class="number">
+                    <p>New Cases</p>
+                    <p>10,000,000</p>
+                </div>
+            </div>
+            <div class="other_stats_num gradient_text">
+                <div class="deaths"></div>
+                <div class="number">
+                    <p>Total Deaths</p>
+                    <p>10,000,000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="country-card">
+        <div class="title gradient_text">
+            USA
+        </div>
+        <div class="total_cases gradient_text">
+            <div class="flag"></div>
+            <div class="total_cases_num">
+                <p>Total Cases</p>
+                <div class="number">
+                    <div class="covid"></div>
+                    <p>10,000,00</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="other_stats">
+            <div class="other_stats_num gradient_text">
+                <div class="recovery"></div>
+                <div class="number">
+                    <p>Total Recoveries</p>
+                    <p>10,000,000</p>
+                </div>
+            </div>
+            <div class="other_stats_num gradient_text">
+                <div class="active"></div>
+                <div class="number">
+                    <p>Active Cases</p>
+                    <p>10,000,000</p>
+                </div>
+            </div>
+            <div class="other_stats_num gradient_text">
+                <div class=" mask"></div>
+                <div class="number">
+                    <p>New Cases</p>
+                    <p>10,000,000</p>
+                </div>
+            </div>
+            <div class="other_stats_num gradient_text">
+                <div class="deaths"></div>
+                <div class="number">
+                    <p>Total Deaths</p>
+                    <p>10,000,000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="country-card">
+        <div class="title gradient_text">
+            USA
+        </div>
+        <div class="total_cases gradient_text">
+            <div class="flag"></div>
+            <div class="total_cases_num">
+                <p>Total Cases</p>
+                <div class="number">
+                    <div class="covid"></div>
+                    <p>10,000,00</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="other_stats">
+            <div class="other_stats_num gradient_text">
+                <div class="recovery"></div>
+                <div class="number">
+                    <p>Total Recoveries</p>
+                    <p>10,000,000</p>
+                </div>
+            </div>
+            <div class="other_stats_num gradient_text">
+                <div class="active"></div>
+                <div class="number">
+                    <p>Active Cases</p>
+                    <p>10,000,000</p>
+                </div>
+            </div>
+            <div class="other_stats_num gradient_text">
+                <div class=" mask"></div>
+                <div class="number">
+                    <p>New Cases</p>
+                    <p>10,000,000</p>
+                </div>
+            </div>
+            <div class="other_stats_num gradient_text">
+                <div class="deaths"></div>
+                <div class="number">
+                    <p>Total Deaths</p>
+                    <p>10,000,000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="country-card">
+        <div class="title gradient_text">
+            USA
+        </div>
+        <div class="total_cases gradient_text">
+            <div class="flag"></div>
+            <div class="total_cases_num">
+                <p>Total Cases</p>
+                <div class="number">
+                    <div class="covid"></div>
+                    <p>10,000,00</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="other_stats">
+            <div class="other_stats_num gradient_text">
+                <div class="recovery"></div>
+                <div class="number">
+                    <p>Total Recoveries</p>
+                    <p>10,000,000</p>
+                </div>
+            </div>
+            <div class="other_stats_num gradient_text">
+                <div class="active"></div>
+                <div class="number">
+                    <p>Active Cases</p>
+                    <p>10,000,000</p>
+                </div>
+            </div>
+            <div class="other_stats_num gradient_text">
+                <div class=" mask"></div>
+                <div class="number">
+                    <p>New Cases</p>
+                    <p>10,000,000</p>
+                </div>
+            </div>
+            <div class="other_stats_num gradient_text">
+                <div class="deaths"></div>
+                <div class="number">
+                    <p>Total Deaths</p>
+                    <p>10,000,000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="country-card">
+        <div class="title gradient_text">
+            USA
+        </div>
+        <div class="total_cases gradient_text">
+            <div class="flag"></div>
+            <div class="total_cases_num">
+                <p>Total Cases</p>
+                <div class="number">
+                    <div class="covid"></div>
+                    <p>10,000,00</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="other_stats">
+            <div class="other_stats_num gradient_text">
+                <div class="recovery"></div>
+                <div class="number">
+                    <p>Total Recoveries</p>
+                    <p>10,000,000</p>
+                </div>
+            </div>
+            <div class="other_stats_num gradient_text">
+                <div class="active"></div>
+                <div class="number">
+                    <p>Active Cases</p>
+                    <p>10,000,000</p>
+                </div>
+            </div>
+            <div class="other_stats_num gradient_text">
+                <div class=" mask"></div>
+                <div class="number">
+                    <p>New Cases</p>
+                    <p>10,000,000</p>
+                </div>
+            </div>
+            <div class="other_stats_num gradient_text">
+                <div class="deaths"></div>
+                <div class="number">
+                    <p>Total Deaths</p>
+                    <p>10,000,000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="country-card">
+        <div class="title gradient_text">
+            USA
+        </div>
+        <div class="total_cases gradient_text">
+            <div class="flag"></div>
+            <div class="total_cases_num">
+                <p>Total Cases</p>
+                <div class="number">
+                    <div class="covid"></div>
+                    <p>10,000,00</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="other_stats">
+            <div class="other_stats_num gradient_text">
+                <div class="recovery"></div>
+                <div class="number">
+                    <p>Total Recoveries</p>
+                    <p>10,000,000</p>
+                </div>
+            </div>
+            <div class="other_stats_num gradient_text">
+                <div class="active"></div>
+                <div class="number">
+                    <p>Active Cases</p>
+                    <p>10,000,000</p>
+                </div>
+            </div>
+            <div class="other_stats_num gradient_text">
+                <div class=" mask"></div>
+                <div class="number">
+                    <p>New Cases</p>
+                    <p>10,000,000</p>
+                </div>
+            </div>
+            <div class="other_stats_num gradient_text">
+                <div class="deaths"></div>
+                <div class="number">
+                    <p>Total Deaths</p>
+                    <p>10,000,000</p>
+                </div>
+            </div>
+        </div>
+    </div> -->

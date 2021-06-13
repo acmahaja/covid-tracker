@@ -9,9 +9,6 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(__dirname + '/public'));
 
-const data = require('./public/data.json');
-const countries = require('./public/country-code.json');
-const { count } = require('console');
 
 app.get('/country/:code', async(req, res) => {
     const { code } = req.params;
@@ -22,12 +19,7 @@ app.get('/country/:code', async(req, res) => {
 });
 
 
-app.get('/data', async(req, res) => {
-    res.send(JSON.stringify(data))
-});
-
 app.get('/', async(req, res) => {
-
     res.sendFile(path.join(__dirname, '/views/index.html'));
 });
 
