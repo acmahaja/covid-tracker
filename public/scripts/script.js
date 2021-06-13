@@ -184,12 +184,12 @@ document.addEventListener("DOMContentLoaded", async() => {
     await fetch('https://disease.sh/v3/covid-19/countries')
         .then(
             function(response) {
-                console.log(response);
 
                 if (response.status === 200) {
                     response.json().then(function(countries) {
                         countries.forEach(country => {
                             addcountry(country);
+                            countries_data.push(country)
                         });
                     });
                 } else {
@@ -204,4 +204,17 @@ document.addEventListener("DOMContentLoaded", async() => {
             console.log('Fetch Error :-S', err);
         });
 
+})
+
+
+document.getElementById("filterer").addEventListener("input", () => {
+    const cards = document.getElementsByClassName('cards');
+
+    cards[0].innerHTML = "";
+    countries_data.forEach((country) => {
+        if (country.country.toLowerCase().includes(document.getElementById("filterer").value.toLowerCase())) {
+            addcountry(country)
+
+        }
+    })
 })
