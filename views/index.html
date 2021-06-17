@@ -63,7 +63,13 @@
                     <img src="/icons/covid-white.png" alt="">
                 </div>
                 <div class="number">
-                    <p id="total_cases"></p>
+                    <p id="total_cases">
+                        <div class="lds-ripple">
+                            <div></div>
+                            <div></div>
+                        </div>
+
+                    </p>
                 </div>
             </div>
             <div class="global_card gradient">
@@ -72,7 +78,12 @@
                     <img src="/icons/vaccinated-white.png" alt="">
                 </div>
                 <div class="number">
-                    <p id="total_recoveries"> </p>
+                    <p id="total_recoveries">
+                        <div class="lds-ripple">
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </p>
                 </div>
             </div>
             <div class="global_card">
@@ -81,7 +92,12 @@
                     <img src="/icons/mask-gradient.png" alt="">
                 </div>
                 <div class="number gradient_text">
-                    <p id="new_cases"> </p>
+                    <p id="new_cases">
+                        <div class="lds-ripple">
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </p>
                 </div>
             </div>
             <div class="global_card">
@@ -90,16 +106,47 @@
                     <img src="/icons/active-cases.png" alt="">
                 </div>
                 <div class="number gradient_text">
-                    <p id="acitve_cases"> </p>
+                    <p id="acitve_cases">
+                        <div class="lds-ripple">
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </p>
                 </div>
             </div>
         </div>
+
+
         <div class="country_data">
             <div class="filter">
-                <input type="text" name="" id="filterer" value="Search for country">
+                <div class="continentFilter">
+                    <select name="continent" id="continent">
+                        <option value="AF">Africa</option>
+                        <option value="AS">Asia</option>
+                        <option value="EU">Europe</option>
+                        <option value="NA">North America</option>
+                        <option value="OC">Oceania</option>
+                        <option value="SA">South America</option>
+                    </select>
+                </div>
+                <div class="sortCountry">
+                    <select name="continent" id="continent">
+                        <option value="AF">Africa</option>
+                        <option value="AS">Asia</option>
+                        <option value="EU">Europe</option>
+                        <option value="NA">North America</option>
+                    </select>
+                </div>
+                <div class="countrySearch">
+                    <label for=""></label>
+                    <input type="text" name="filterer" id="filterer">
+                </div>
             </div>
             <div class="cards">
-
+                <div class="lds-ripple">
+                    <div></div>
+                    <div></div>
+                </div>
             </div>
         </div>
     </section>
